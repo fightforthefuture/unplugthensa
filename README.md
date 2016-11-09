@@ -1,4 +1,4 @@
-# unplugthensa.org 
+# unplugthensa.org
 
 # Installing & running the server
 
