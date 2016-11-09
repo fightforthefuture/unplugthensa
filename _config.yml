@@ -1,0 +1,56 @@
+#################################################
+# Config: Development                           #
+#################################################
+# (production settings go in _config.build.yml) #
+
+#############
+# Meta info #
+#############
+
+url: https://www.takedownabuse.org
+petitions_api: https://info.fightforthefuture.org
+timezone: America/New_York
+googleanalytics: UA-26576645-30
+
+################
+# Social Media #
+################
+
+name: 'Obama: Shut down NSA mass surveillance!'
+description: 'This is why unaccountable, secret, spying weapons are too dangerous for any government to build.'
+sharetitle: 'Obama: shut down the NSA''s mass spying programs before Trump gets his hands on them.'
+sharedescription: 'This is why unaccountable, secret, spying weapons are too dangerous for any government to build.'
+twittertext: 'Obama: shut down the NSA''s mass spying programs before Trump gets his hands on them'
+
+author:
+  googleid: 102356128596404327231
+  twitterid: 382376904
+  twitter: fightfortheftr
+
+###########
+# Content #
+###########
+
+future: true
+show_drafts: true
+permalink: /:title/
+
+defaults:
+  - scope:
+      path: ''
+    values:
+      layout: default
+
+collections:
+  stories:
+    output: true
+    permalink: /stories/:path/
+
+#############
+# Compiling #
+#############
+
+exclude: ['img']
+keep_files: ['img', 'js', 'css']
+
+markdown: kramdown
