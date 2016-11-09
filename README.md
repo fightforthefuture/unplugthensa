@@ -1,6 +1,6 @@
-# takedownabuse.org 
+# unplugthensa.org
 
-## Installing & running the server
+# Installing & running the server
 
 - Install/switch to the ruby version specified in [.ruby-version](https://github.com/fightforthefuture/savesecurity.org/blob/production/.ruby-version) (i recommend [rbenv](http://rbenv.org/) where available.)
 - `npm install` installs bundler, node modules, and ruby gems
