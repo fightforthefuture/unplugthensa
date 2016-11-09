@@ -25,4 +25,4 @@ addons:
       - g++-4.8
 branches:
   only:
-    - production
+    - master
