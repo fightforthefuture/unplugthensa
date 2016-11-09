@@ -1,7 +1,7 @@
 #!/bin/bash
 cd dist || exit 0;
 
-if  [ "$TRAVIS" = "true" -a "$TRAVIS_PULL_REQUEST" = "false"  -a "$TRAVIS_BRANCH" = "production" ]
+if  [ "$TRAVIS" = "true" -a "$TRAVIS_PULL_REQUEST" = "false"  -a "$TRAVIS_BRANCH" = "master" ]
   then
     (cp ../CNAME ./CNAME
      git init
