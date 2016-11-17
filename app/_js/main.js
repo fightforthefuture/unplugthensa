@@ -8,9 +8,6 @@ function googlePlus() {
 (function (doc, win) {
   "use strict";
 
-  if (!document.getElementById('obama-stop-the-nsa'))
-    return false;
-
   function triggerComponents() {
     win.components = win.components || {};
     var
@@ -34,8 +31,8 @@ function googlePlus() {
   var shareVisibilityTriggered = false;
   var headlineEl  = document.getElementById('obama-stop-the-nsa'),
       bodyRect    = document.body.getBoundingClientRect(),
-      elemRect    = headlineEl.getBoundingClientRect(),
-      headlineY   = elemRect.top - bodyRect.top;
+      elemRect    = headlineEl ? headlineEl.getBoundingClientRect() : null,
+      headlineY   = elemRect ? (elemRect.top - bodyRect.top) : null;
 
   var listenerFn = function() {
     var top   = ((window.pageYOffset||doc.scrollTop)-(doc.clientTop||0)||0),
@@ -54,17 +51,18 @@ function googlePlus() {
 
 
   // JL HACK ~ disable countdown
-  if (typeof window.VARIATION === 'undefined' || window.VARIATION == 'splash') {
+  if (doc.body.className.indexOf('content') === -1) {
     listenerFn();
     window.addEventListener('scroll', listenerFn);
   }
 
 
-  doc.querySelector('[href="#obama-stop-the-nsa"]').addEventListener('click', function (e){
-    e.preventDefault();
+  if (doc.querySelector('[href="#obama-stop-the-nsa"]'))
+    doc.querySelector('[href="#obama-stop-the-nsa"]').addEventListener('click', function (e){
+      e.preventDefault();
 
-    win.smoothScroll(doc.getElementById('obama-stop-the-nsa'));
-  });
+      win.smoothScroll(doc.getElementById('obama-stop-the-nsa'));
+    });
 
 
   var gl = document.querySelectorAll('button.google');

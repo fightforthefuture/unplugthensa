@@ -1,0 +1,38 @@
+.letter {
+  padding: 10px;
+
+  background: white;
+  display: block;
+  margin: 35px auto;
+  max-width: 800px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+
+  @media screen and (min-width: @large-phone) {
+    padding: 60px 40px;
+  }
+
+  p {
+    text-align: left;
+    text-align-last: left;
+    color: black;
+
+    &.signatories {
+      text-align: center;
+      text-align-last: center;
+    }
+  }
+  ul {
+    text-align: center;
+    li {
+      display: inline-block;
+      vertical-align: middle;
+
+      img {
+        max-width: 250px;
+        height: auto;
+        vertical-align: middle;
+        margin: 10px;
+      }
+    }
+  }
+}
